@@ -1,3 +1,7 @@
+var x = 20;
+var y = 20;
+var s = 20; // size
+
 function setup() {
     createCanvas(900, 600);
     background(255, 204, 0);
@@ -13,11 +17,11 @@ function draw() {
 }
 
 
-//title
+//text
 var story = {
     display: function () {
         var title = "Mr.snow man & Ms.snow girl";
-        textSize(40);
+        textSize(x * 2);
         fill('white');
         text(title, width / 5, 50);
 
@@ -54,11 +58,11 @@ function body(color) {
     fill(color);
     noStroke();
 
-    ellipse(400, 430, 140);
+    ellipse(x * 20, y * 22, s * 7);
 
-    ellipse(400, 350, 100);
+    ellipse(x * 20, y * 18, s * 5);
 
-    ellipse(400, 290, 75);
+    ellipse(x * 20, y * 14.5, s * 4);
 }
 
 function bodyGirl(color) {
@@ -66,62 +70,62 @@ function bodyGirl(color) {
     fill(color);
     noStroke();
 
-    ellipse(600, 430, 140);
+    ellipse(x * 30, y * 22, s * 7);
 
-    ellipse(600, 350, 100);
+    ellipse(x * 30, y * 18, s * 5);
 
-    ellipse(600, 290, 75);
+    ellipse(x * 30, y * 14.5, s * 4);
 }
 
 function eyes(color) {
     fill(0);
     noStroke();
 
-    ellipse(385, 285, 10);
-    ellipse(415, 285, 10);
+    ellipse(x * 19.2, y * 14.2, s / 2);
+    ellipse(x * 20.7, y * 14.2, s / 2);
 }
 
 function eyesGirl(color) {
     fill(0);
     noStroke();
 
-    ellipse(585, 285, 10);
-    ellipse(615, 285, 10);
+    ellipse(x * 29.2, y * 14.2, s / 2);
+    ellipse(x * 30.7, y * 14.2, s / 2);
 }
 
 function nose(color) {
     fill(240, 110, 0);
-    triangle(398, 300, 398, 290, 415, 295);
+    triangle(x * 20, y * 15, x * 20, y * 14.5, x * 21, y * 14.7);
 }
 
 function noseGirl(color) {
     fill(240, 110, 0);
-    triangle(598, 300, 598, 290, 615, 295);
+    triangle(x * 30, y * 15, x * 30, y * 14.5, x * 31, y * 14.7);
 }
 
 
 function mouth(color) {
     fill(0);
-    ellipse(380, 305, 8);
-    ellipse(388, 310, 8);
-    ellipse(397, 312, 8);
-    ellipse(406, 312, 8);
+    ellipse(x * 19, y * 15.2, s / 2.5);
+    ellipse(x * 19.4, y * 15.5, s / 2.5);
+    ellipse(x * 19.9, y * 15.6, s / 2.5);
+    ellipse(x * 20.5, y * 15.6, s / 2.5);
 }
 
 function mouthGirl(color) {
-    fill(0);
-    ellipse(580, 305, 8);
-    ellipse(588, 310, 8);
-    ellipse(597, 312, 8);
-    ellipse(606, 312, 8);
+    fill("red");
+    ellipse(x * 29, y * 15.2, s / 2.5);
+    ellipse(x * 29.4, y * 15.5, s / 2.5);
+    ellipse(x * 29.9, y * 15.6, s / 2.5);
+    ellipse(x * 30.5, y * 15.6, s / 2.5);
 }
 
 function arms(color) {
     stroke(0);
-    line(330, 310, 350, 450);
+    line(x * 16.5, y * 15.5, x * 17.5, y * 22.5);
 }
 
 function armsGirl(color) {
     stroke(0);
-    line(700, 310, 650, 450);
+    line(x * 33, y * 15.5, x * 33, y * 22.5);
 }
